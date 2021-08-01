@@ -1,0 +1,118 @@
+/* CSS Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #030303;
+  opacity: 0.8;
+  background-image: radial-gradient(#00ffb1 0.5px, #030303 0.5px);
+  background-size: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+}
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.audio-container {
+  height: 500px;
+  width: 400px;
+  background: #fc1d0dfb;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px 5px rgba(226, 226, 226, 0.3);
+  margin-top: 25px;
+}
+
+.img-container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 5px 30px 5px rgba(226, 226, 226, 0.3);
+  margin-top: 25px;
+}
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+.progress {
+  background: #ff9696;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+.duration-container {
+  position: relative;
+  top: -30px;
+  display: flex;
+  justify-content: space-between;
+}
+/* Audio controls */
+.audio-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3.5rem;
+  margin: -10px 20px;
+}
+.fas,
+.far {
+  cursor: pointer;
+  user-select: none;
+}
+.far:hover {
+  filter: brightness(80%);
+}
+.fas:hover {
+  filter: brightness(80%);
+}
+
+/* Media Query */
+@media screen and (max-width: 376px) {
+  body {
+    font-size: 1rem;
+  }
+  .audio-container {
+    width: 90vw;
+  }
+  .img-container {
+    height: 200px;
+    width: 200px;
+  }
+  .img-container img {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+  }
+  .audio-controls {
+    margin: 60px;
+  }
+}
