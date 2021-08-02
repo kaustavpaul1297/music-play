@@ -109,8 +109,20 @@ function updateProgessBar(e) {
     currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
   }
 }
+// Set progress bar
+function setProgressBar(e) {
+  const width = this.clientWidth;
+
+  const clickX = e.offsetX;
+
+  const { duration } = music;
+
+  music.currentTime = (clickX / width) * duration;
+}
 // On Load
 loadSong(songs[songIndex]);
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 music.addEventListener("timeupdate", updateProgessBar);
+progressContainer.addEventListener("click", setProgressBar);
+music.addEventListener("ended", nextSong);
