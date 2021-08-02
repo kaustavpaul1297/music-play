@@ -94,6 +94,12 @@ h3 {
 .fas:hover {
   filter: brightness(80%);
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 25px;
+}
 
 /* Media Query */
 @media screen and (max-width: 376px) {
@@ -101,7 +107,7 @@ h3 {
     font-size: 1rem;
   }
   .audio-container {
-    width: 90vw;
+    width: 92vw;
   }
   .img-container {
     height: 200px;
